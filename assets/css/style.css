@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #22424714;
+
+}
+header {
+    nav {
+        height: 80px;
+        background-color: #00bcd4; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        h1 {
+            font-size: 48px;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+    }
+    .hero {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        form {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            background-color: #fff;
+            padding: 16px 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            .search {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                input[type="search"] {
+                    width: 300px;
+                    height: 40px;
+                    padding-left: 12px;
+                    border-radius: 6px;
+                    border: 1px solid #ccc;
+                    outline: none;
+                    transition: border 0.3s;
+                    &:hover {
+                        border-color: #00bcd4;
+                    }
+                }
+                input[type="submit"] {
+                    width: 80px;
+                    height: 40px;
+                    border: none;
+                    background-color: #00bcd4;
+                    color: white;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    transition: background-color 0.3s;
+                    &:hover {
+                        background-color: #008ba3;
+                    }
+                }
+            }
+            select {
+                width: 140px;
+                height: 40px;
+                border: 1px solid #ccc;
+                background-color: #fff;
+                border-radius: 6px;
+                padding: 0 8px;
+                outline: none;
+                cursor: pointer;
+                &:hover {
+                    border-color: #00bcd4;
+                }
+            }
+        }
+
+        .container {
+            width: 90vw;
+            padding: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            .card {
+                width: 280px;
+                background-color: #ffffff7a;
+                border: 1px solid #e0e0e0;
+                border-radius: 10px;
+                padding: 16px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                transition: transform 0.2s;
+                &:hover {
+                    transform: translateY(-5px);
+                }
+                p {
+                    font-size: 14px;
+                    color: #333;
+                }
+                .title {
+                    font-weight: bold;
+                    font-size: 16px;
+                    color: #00bcd4;
+                }
+                .actions {
+                    display: flex;
+                    gap: 10px;
+                    margin-top: 10px;
+                }
+                button {
+                    padding: 8px;
+                    border: none;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: white;
+                    transition: opacity 0.3s;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+                .status {
+                    background-color: #4CAF50;
+                }
+                .delete {
+                    background-color: #f44336;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:786px) {
+    header {
+        .hero {
+            form {
+                flex-direction: column;
+                padding: 8px 4px;
+                gap: 24px;
+                .search {
+                    gap: 4px;
+                    input[type="search"] {
+                        width: 200px;
+                    }
+                }        
+            }
+        }
+    }
+}
